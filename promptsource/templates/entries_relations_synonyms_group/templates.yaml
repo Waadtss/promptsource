@@ -1,0 +1,41 @@
+dataset: entries_relations_synonyms_group
+templates:
+  248998f3-576b-4cf3-97d5-a6c34c132115: !Template
+    answer_choices: null
+    id: 248998f3-576b-4cf3-97d5-a6c34c132115
+    jinja: "\u0645\u0627 \u0647\u064A \u0627\u0644\u0643\u0644\u0645\u0627\u062A \u0627\
+      \u0644\u0645\u0631\u0627\u062F\u0641\u0629 \u0644\u0644\u0643\u0644\u0645\u0629\
+      \ \u0627\u0644\u0622\u062A\u064A\u0629:\n{{lemma}}\n|||\n{{SYNON}}"
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: syn.03
+    reference: ''
+  60b1b2e4-6b8e-44da-b0df-1b2e35fed8ec: !Template
+    answer_choices: null
+    id: 60b1b2e4-6b8e-44da-b0df-1b2e35fed8ec
+    jinja: "\u0645\u0627 \u0627\u0644\u0645\u0631\u0627\u062F\u0641\u0627\u062A \u0644\
+      \u0644\u0643\u0644\u0645\u0629 \u0627\u0644\u0622\u062A\u064A\u0629:\n{{lemma}}\n\
+      |||\n{{SYNON}}"
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: syn.01
+    reference: ''
+  962adb62-c726-453f-a27f-29f571691500: !Template
+    answer_choices: null
+    id: 962adb62-c726-453f-a27f-29f571691500
+    jinja: "\u0645\u0627 \u0627\u0644\u0643\u0644\u0645\u0627\u062A \u0627\u0644\u0645\
+      \u0631\u0627\u062F\u0641\u0629 \u0644\u0644\u0643\u0644\u0645\u0629 \u0627\u0644\
+      \u0622\u062A\u064A\u0629:\n{{lemma}}\n|||\n{{SYNON}}"
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: syn.02
+    reference: ''

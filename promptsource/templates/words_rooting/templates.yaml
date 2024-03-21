@@ -1,0 +1,38 @@
+dataset: words_rooting
+templates:
+  261341ce-db33-4660-8d29-f2ba105adf50: !Template
+    answer_choices: null
+    id: 261341ce-db33-4660-8d29-f2ba105adf50
+    jinja: "\u0623\u0639\u0637\u0646\u064A \u062C\u0630\u0631 \u0627\u0644\u0643\u0644\
+      \u0645\u0629:\n{{lemma}}\n|||\n{{root}}"
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: root.03
+    reference: ''
+  551b9d05-382e-4459-8c07-3e9b2ddc0d5d: !Template
+    answer_choices: null
+    id: 551b9d05-382e-4459-8c07-3e9b2ddc0d5d
+    jinja: "\u0645\u0627 \u0647\u0648 \u062C\u0630\u0631 \u0627\u0644\u0643\u0644\u0645\
+      \u0629:\n{{lemma}}\n|||\n{{root}}"
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: root.02
+    reference: ''
+  6aacc06b-4bd5-4e45-9f8d-1ddc65981b98: !Template
+    answer_choices: null
+    id: 6aacc06b-4bd5-4e45-9f8d-1ddc65981b98
+    jinja: "\u0645\u0627 \u062C\u0630\u0631 \u0627\u0644\u0643\u0644\u0645\u0629:\n\
+      {{lemma}}\n|||\n{{root}}"
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: root.01
+    reference: ''

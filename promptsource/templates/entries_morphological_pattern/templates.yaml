@@ -1,0 +1,13 @@
+dataset: entries_morphological_pattern
+templates:
+  76da8fba-cf84-44cc-9808-1b0417d6e6b6: !Template
+    answer_choices: null
+    id: 76da8fba-cf84-44cc-9808-1b0417d6e6b6
+    jinja: ''
+    metadata: !TemplateMetadata
+      choices_in_prompt: null
+      languages: null
+      metrics: null
+      original_task: null
+    name: mp.01
+    reference: ''

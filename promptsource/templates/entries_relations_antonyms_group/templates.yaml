@@ -1,0 +1,41 @@
+dataset: entries_relations_antonyms_group
+templates:
+  68eb2340-ff9d-4352-9b3d-7e0c338de344: !Template
+    answer_choices: null
+    id: 68eb2340-ff9d-4352-9b3d-7e0c338de344
+    jinja: "\u0645\u0627 \u0627\u0644\u0645\u062A\u0636\u0627\u062F\u0627\u062A \u0627\
+      \u0644\u0643\u0644\u0645\u0629 \u0627\u0644\u0622\u062A\u064A\u0629:\n{{lemma}}\n\
+      |||\n{{ANTON}}"
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: ant.01
+    reference: ''
+  87149668-dedd-4641-92be-7959db1b4dee: !Template
+    answer_choices: null
+    id: 87149668-dedd-4641-92be-7959db1b4dee
+    jinja: "\u0645\u0627 \u0647\u064A \u0627\u0644\u0643\u0644\u0645\u0627\u062A \u0639\
+      \u0643\u0633 \u0627\u0644\u0643\u0644\u0645\u0629 \u0627\u0644\u0622\u062A\u064A\
+      \u0629:\n{{lemma}}\n|||\n{{ANTON}}"
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: ant.03
+    reference: ''
+  b1582d1b-9a75-4ceb-86a5-83f5428b6bc3: !Template
+    answer_choices: null
+    id: b1582d1b-9a75-4ceb-86a5-83f5428b6bc3
+    jinja: "\u0627\u0633\u062A\u062E\u0631\u062C \u0627\u0644\u0643\u0644\u0645\u0627\
+      \u062A \u0639\u0643\u0633 \u0627\u0644\u0643\u0644\u0645\u0629 \u0627\u0644\u0622\
+      \u062A\u064A\u0629:\n{{lemma}}\n|||\n{{ANTON}}"
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: ant.02
+    reference: ''

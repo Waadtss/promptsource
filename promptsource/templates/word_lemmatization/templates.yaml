@@ -1,0 +1,44 @@
+dataset: word_lemmatization
+templates:
+  23bf16e9-222e-4fea-816f-db9dc8520924: !Template
+    answer_choices: null
+    id: 23bf16e9-222e-4fea-816f-db9dc8520924
+    jinja: "\u0645\u0627 \u0627\u0644\u0645\u0627\u062F\u0629 \u0627\u0644\u0645\u0639\
+      \u062C\u0645\u064A\u0629 \u0644\u0644\u0643\u0644\u0645\u0629 \u0627\u0644\u0645\
+      \u062D\u0627\u0637\u0629 \u0628\u0642\u0648\u0633\u064A\u0646:\n{{context}}\n\
+      |||\n{{lemma}}"
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: wl.02
+    reference: ''
+  5e5de160-7932-4d57-989c-b23eda82620a: !Template
+    answer_choices: null
+    id: 5e5de160-7932-4d57-989c-b23eda82620a
+    jinja: "\u0623\u0639\u0637\u0646\u064A \u0627\u0644\u0645\u0627\u062F\u0629 \u0627\
+      \u0644\u0645\u0639\u062C\u0645\u064A\u0629 \u0644\u0644\u0643\u0644\u0645\u0629\
+      \ \u0627\u0644\u0645\u062D\u0627\u0637\u0629 \u0628\u0642\u0648\u0633\u064A\u0646\
+      :\n{{context}}\n|||\n{{lemma}}"
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: wl.03
+    reference: ''
+  f8d0267a-06af-4d49-abbd-c0ccd7366983: !Template
+    answer_choices: null
+    id: f8d0267a-06af-4d49-abbd-c0ccd7366983
+    jinja: " \u0645\u0627 \u0647\u064A \u0627\u0644\u0645\u0627\u062F\u0629 \u0627\
+      \u0644\u0645\u0639\u062C\u0645\u064A\u0629 \u0644\u0644\u0643\u0644\u0645\u0629\
+      \ \u0627\u0644\u0645\u062D\u0627\u0637\u0629 \u0628\u0642\u0648\u0633\u064A\u0646\
+      :\n{{context}}\n|||\n{{lemma}}"
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages: []
+      metrics: []
+      original_task: false
+    name: wl.01
+    reference: ''

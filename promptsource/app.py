@@ -26,7 +26,7 @@ from promptsource.utils import (
     renameDatasetColumn,
     render_features,
 )
-
+from datasets import load_from_disk 
 
 DATASET_INFOS_CACHE_DIR = os.path.join(DEFAULT_PROMPTSOURCE_CACHE_HOME, "DATASET_INFOS")
 os.makedirs(DATASET_INFOS_CACHE_DIR, exist_ok=True)
@@ -281,7 +281,7 @@ def run_app():
         #
 
         dataset_list = list_datasets()
-        ag_news_index = dataset_list.index("ag_news")
+        # ag_news_index = dataset_list.index("Abdelkareem\Arabic-article-summarization-30-000")
 
         #
         # Select a dataset - starts with ag_news
@@ -290,7 +290,7 @@ def run_app():
             "Dataset",
             dataset_list,
             key="dataset_select",
-            index=ag_news_index,
+            index=0,
             help="Select the dataset to work on.",
         )
 
@@ -308,6 +308,7 @@ def run_app():
 
             subset_name = str(conf_option.name) if conf_option else None
             try:
+
                 dataset = get_dataset(dataset_key, subset_name)
             except OSError as e:
                 st.error(

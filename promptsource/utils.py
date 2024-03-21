@@ -106,40 +106,70 @@ def filter_english_datasets():
     Also includes the datasets of any users listed in INCLUDED_USERS
     """
     english_datasets = []
+    # english_datasets.append('entries_relations_synonyms_group')
+    # english_datasets.append('entries_relations_antonyms_group')
+    # english_datasets.append('words_rooting')
+    # english_datasets.append('analysis_part_of_speech_root_plural_pattern')
+    # english_datasets.append('analysis_part_of_speech_root_plural_pattern1')
+    # english_datasets.append('entries_morphological_pattern')
+    # english_datasets.append('reverse_dictionary')
+    # english_datasets.append('Semantic_field')
+    # english_datasets.append('Word_in_Context_disambiguation')
+    # english_datasets.append('word_lemmatization')
+    local_datasets = [dataset for dataset in os.listdir(DEFAULT_PROMPTSOURCE_CACHE_HOME) if dataset != 'DATASET_INFOS']
+    english_datasets.extend(local_datasets)
+    # english_datasets.append('ksaa_data_words_rooting')
+    # response = requests.get("https://huggingface.co/api/datasets?full=true")
+    # tags = response.json()
+    # while "next" in response.links:
+    #     # Handle pagination of `/api/datasets` endpoint
+    #     response = requests.get(response.links["next"]["url"])
+    #     tags += response.json()
 
-    response = requests.get("https://huggingface.co/api/datasets?full=true")
-    tags = response.json()
-    while "next" in response.links:
-        # Handle pagination of `/api/datasets` endpoint
-        response = requests.get(response.links["next"]["url"])
-        tags += response.json()
+    # for dataset in tags:
+    #     dataset_name = dataset["id"]
 
-    for dataset in tags:
-        dataset_name = dataset["id"]
+    #     is_community_dataset = "/" in dataset_name
+    #     if is_community_dataset:
+    #         user = dataset_name.split("/")[0]
+    #         if user in INCLUDED_USERS:
+    #             english_datasets.append(dataset_name)
+    #         continue
 
-        is_community_dataset = "/" in dataset_name
-        if is_community_dataset:
-            user = dataset_name.split("/")[0]
-            if user in INCLUDED_USERS:
-                english_datasets.append(dataset_name)
-            continue
+    #     if "cardData" not in dataset:
+    #         continue
+    #     metadata = dataset["cardData"]
 
-        if "cardData" not in dataset:
-            continue
-        metadata = dataset["cardData"]
+    #     if "language" not in metadata:
+    #         continue
+    #     languages = metadata["language"]
 
-        if "language" not in metadata:
-            continue
-        languages = metadata["language"]
-
-        if "en" in languages or "en-US" in languages:
-            english_datasets.append(dataset_name)
+    #     if "en" in languages or "en-US" in languages : # or "ar" in languages:
+    #         english_datasets.append(dataset_name)
 
     return sorted(english_datasets)
+
+def filter_local_datasets():
+    "Get a dataset from name and conf."
+    
+    cache_root_dir = (
+            os.environ["PROMPTSOURCE_MANUAL_DATASET_DIR"]
+            if "PROMPTSOURCE_MANUAL_DATASET_DIR" in os.environ
+            else DEFAULT_PROMPTSOURCE_CACHE_HOME
+        )
+    local_dataset = [os.path.join(cache_root_dir, 'Abdelkareem\Arabic-article-summarization-30-000')]
+    try:
+        return local_dataset
+        # return datasets.load_from_disk(os.path.join(DEFAULT_PROMPTSOURCE_CACHE_HOME, 'Abdelkareem\Arabic-article-summarization-30-000'))
+        
+    except Exception as err:
+        raise err
+
 
 
 def list_datasets():
     """Get all the datasets to work with."""
     dataset_list = filter_english_datasets()
+    # print(dataset_list)
     dataset_list.sort(key=lambda x: x.lower())
     return dataset_list

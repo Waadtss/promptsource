@@ -1,0 +1,13 @@
+dataset: Semantic_field
+templates:
+  4d7b57ad-458e-4ed2-8eba-acbb16eb8fd3: !Template
+    answer_choices: null
+    id: 4d7b57ad-458e-4ed2-8eba-acbb16eb8fd3
+    jinja: ''
+    metadata: !TemplateMetadata
+      choices_in_prompt: null
+      languages: null
+      metrics: null
+      original_task: null
+    name: sf.01
+    reference: ''
