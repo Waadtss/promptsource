@@ -90,6 +90,7 @@ else:
 #
 get_dataset = st.cache(allow_output_mutation=True)(get_dataset)
 get_dataset_confs = st.cache(get_dataset_confs)
+print("1 get_dataset_confs", get_dataset_confs)
 list_datasets = st.cache(list_datasets)
 
 
@@ -302,6 +303,7 @@ def run_app():
             # Check for subconfigurations (i.e. subsets)
             #
             configs = get_dataset_confs(dataset_key)
+            print("2 configs", configs, "dataset_key", dataset_key )
             conf_option = None
             if len(configs) > 0:
                 conf_option = st.sidebar.selectbox("Subset", configs, index=0, format_func=lambda a: a.name)

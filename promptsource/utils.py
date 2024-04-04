@@ -68,14 +68,18 @@ def get_dataset(path, conf=None):
 
 
 def get_dataset_confs(path):
+    print("path", path)
     "Get the list of confs for a dataset."
     module_path = datasets.load.dataset_module_factory(path).module_path
+    print("module_path", module_path)
     # Get dataset builder class from the processing script
     builder_cls = datasets.load.import_main_class(module_path, dataset=True)
     # Instantiate the dataset builder
     confs = builder_cls.BUILDER_CONFIGS
     if confs and len(confs) > 1:
+        print("if done")
         return confs
+    print("done")
     return []
 
 
@@ -117,6 +121,7 @@ def filter_english_datasets():
     # english_datasets.append('Word_in_Context_disambiguation')
     # english_datasets.append('word_lemmatization')
     local_datasets = [dataset for dataset in os.listdir(DEFAULT_PROMPTSOURCE_CACHE_HOME) if dataset != 'DATASET_INFOS']
+    print("local_datasets", local_datasets)
     english_datasets.extend(local_datasets)
     # english_datasets.append('ksaa_data_words_rooting')
     # response = requests.get("https://huggingface.co/api/datasets?full=true")
